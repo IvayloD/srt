@@ -136,9 +136,12 @@ static void PrintSrtStats(int sid, const PerfMonType& mon)
         output << "\"packetsDropped\":" << mon.pktRcvDrop << ",";
         output << "\"packetsRetransmitted\":" << mon.pktRcvRetrans << ",";
         output << "\"packetsBelated\":" << mon.pktRcvBelated << ",";
+        output << "\"packetsUndecrypted\":" << mon.pktRcvUndecryptTotal << ",";
         output << "\"bytes\":" << mon.byteRecv << ",";
         output << "\"bytesLost\":" << mon.byteRcvLoss << ",";
         output << "\"bytesDropped\":" << mon.byteRcvDrop << ",";
+        output << "\"bytesUndecrypted\":" << mon.byteRcvUndecryptTotal << ",";
+        output << "\"bufferMs\":" << mon.msRcvBuf << ",";
         output << "\"mbitRate\":" << mon.mbpsRecvRate;
         output << "}";
         output << "}" << endl;
